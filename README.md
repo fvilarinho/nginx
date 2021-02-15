@@ -12,12 +12,14 @@ Build status
 ![CI/CD](https://github.com/concepting-com-br/nginx/workflows/Docker/badge.svg)
 
 
-Installation
-============
+How to use
+==========
 
-To use this image, just put the line below in your Dockerfile.
+Just put the line below in your Dockerfile.
 
-`FROM ghcr.io/concepting-com-br/sftp:latest`
+`FROM ghcr.io/concepting-com-br/nginx:1.0.0` - To use the last stable version.
+
+`FROM ghcr.io/concepting-com-br/nginx:latest` - To use the development version.
 
 
 License
