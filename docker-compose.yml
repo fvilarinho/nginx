@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  nginx:
+    build:
+      context: .
+    image: ghcr.io/concepting-com-br/nginx:${BUILD_VERSION}
+    container_name: nginx
+    hostname: nginx
+    ports: 
+      - 80:80
+      - 443:443
+    depends_on:
+      - etcd
+      
+  etcd:
+    image: ghcr.io/concepting-com-br/etcd:1.0.0
+    container_name: etcd
+    hostname: etcd
+    ports: 
+      - 2379:2379
+    volumes:
+      - ./etc/settings.json:/home/user/etc/nginx.json
+      - etcd-data:/home/user/data
+
+volumes:
+  sftp-data:
+  sftp-log:
+  etcd-data:
+  
