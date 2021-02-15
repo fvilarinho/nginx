@@ -2,7 +2,7 @@ Synopsys
 ========
 
 This a base image for a WEB server to distribute content.
-It uses the `ghcr.io/concepting-com-br/base-image` and `openssh-server` as the main engine.
+It uses the `ghcr.io/concepting-com-br/base-image` and `nginx` as the main engine.
 The configurations/settings are defined using the JSON format and stored in the `etc` directory.
 
 
