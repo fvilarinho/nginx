@@ -9,7 +9,7 @@ The configurations/settings are defined using the JSON format and stored in the 
 Build status
 ============
 
-![CI/CD](https://github.com/concepting-com-br/nginx/workflows/Docker/badge.svg)
+![CI/CD](https://github.com/concepting-com-br/nginx/workflows/CI/CD/badge.svg)
 
 
 How to use
