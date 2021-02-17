@@ -8,8 +8,8 @@ services:
     container_name: nginx
     hostname: nginx
     ports: 
-      - 80:80
-      - 443:443
+      - "80:80"
+      - "443:443"
     depends_on:
       - etcd
       
@@ -18,7 +18,7 @@ services:
     container_name: etcd
     hostname: etcd
     ports: 
-      - 2379:2379
+      - "2379:2379"
     volumes:
       - ./etc/settings.json:/home/user/etc/nginx.json
       - etcd-data:/home/user/data
