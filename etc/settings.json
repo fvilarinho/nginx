@@ -1,4 +1,20 @@
 {
-	"buildName": "nginx",
-	"buildVersion": "latest"
+	"build":{
+		"name": {
+			"description": "Name of the build.",
+			"value": "nginx"
+		},
+		"version": {
+			"description": "Version of the build.",
+			"value": "latest"
+		}
+	},
+	"port": {
+		"description": "Network port to listen the requests.",
+		"value": 80
+	},
+	"securePort": {
+		"description": "Network port to listen the secure requests.",
+		"value": 443
+	}
 }
