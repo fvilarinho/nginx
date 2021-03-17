@@ -20,7 +20,6 @@ COPY bin/install.sh ${BIN_DIR}/child-install.sh
 COPY .env ${ETC_DIR}/
 
 RUN ln -s ${ETC_DIR}/nginx/ssl /etc/nginx/ssl && \
-    ln -s ${ETC_DIR}/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf && \
     chmod +x ${BIN_DIR}/child-*.sh && \
     chown -R user:group ${HOME_DIR}/ && \
     chmod -R o-rwx ${HOME_DIR}/
