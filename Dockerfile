@@ -20,8 +20,10 @@ COPY bin/install.sh ${BIN_DIR}/child-install.sh
 COPY .env ${ETC_DIR}/
 
 RUN ln -s ${ETC_DIR}/nginx/ssl /etc/nginx/ssl && \
-    chmod +x ${BIN_DIR}/*.sh
-    
+    chmod +x ${BIN_DIR}/child-*.sh && \
+    chown -R user:group ${HOME_DIR}/ && \
+    chmod -R o-rwx ${HOME_DIR}/
+
 WORKDIR ${HOME_DIR}
 
 EXPOSE 80 443
