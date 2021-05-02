@@ -17,7 +17,7 @@ COPY htdocs ${HTDOCS_DIR}
 COPY etc/nginx ${ETC_DIR}/nginx
 COPY bin/startup.sh ${BIN_DIR}/child-startup.sh
 COPY bin/install.sh ${BIN_DIR}/child-install.sh
-COPY .env ${ETC_DIR}/
+COPY .env ${ETC_DIR}/.release
 
 RUN ln -s ${ETC_DIR}/nginx/ssl /etc/nginx/ssl && \
     chmod +x ${BIN_DIR}/child-*.sh && \

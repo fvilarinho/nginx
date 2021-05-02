@@ -4,9 +4,9 @@ services:
   nginx:
     build:
       context: .
-    image: ghcr.io/concepting-com-br/nginx:${BUILD_VERSION}
-    container_name: nginx
-    hostname: nginx
+    image: ghcr.io/concepting-com-br/${BUILD_NAME}:${BUILD_VERSION}
+    container_name: ${BUILD_NAME}
+    hostname: ${BUILD_NAME}
     ports: 
       - "80:80"
       - "443:443"
@@ -14,7 +14,7 @@ services:
       - etcd
       
   etcd:
-    image: ghcr.io/concepting-com-br/etcd:1.0.0
+    image: ghcr.io/concepting-com-br/etcd:1.1.0
     container_name: etcd
     hostname: etcd
     ports: 
