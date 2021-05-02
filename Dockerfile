@@ -21,7 +21,7 @@ COPY .env ${ETC_DIR}/.release
 
 RUN ln -s ${ETC_DIR}/nginx/ssl /etc/nginx/ssl && \
     chmod +x ${BIN_DIR}/child-*.sh && \
-    chown -R user:group ${HOME_DIR}/ && \
+    chown -R user:www-data ${HOME_DIR}/ && \
     chmod -R o-rwx ${HOME_DIR}/
 
 WORKDIR ${HOME_DIR}
