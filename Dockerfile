@@ -1,4 +1,4 @@
-FROM ghcr.io/concepting-com-br/base-image:1.0.0
+FROM ghcr.io/concepting-com-br/base-image:1.1.0
 
 LABEL maintainer="fvilarinho@concepting.com.br"
 
@@ -17,13 +17,13 @@ COPY htdocs ${HTDOCS_DIR}
 COPY etc/nginx ${ETC_DIR}/nginx
 COPY bin/startup.sh ${BIN_DIR}/child-startup.sh
 COPY bin/install.sh ${BIN_DIR}/child-install.sh
-COPY .env ${ETC_DIR}/
+COPY .env ${ETC_DIR}/.release
 
 RUN ln -s ${ETC_DIR}/nginx/ssl /etc/nginx/ssl && \
     chmod +x ${BIN_DIR}/child-*.sh && \
     chown -R user:group ${HOME_DIR}/ && \
     chmod -R o-rwx ${HOME_DIR}/
-    
+
 WORKDIR ${HOME_DIR}
 
 EXPOSE 80 443

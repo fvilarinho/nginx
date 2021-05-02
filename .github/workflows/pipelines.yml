@@ -8,7 +8,7 @@ on:
       - 'LICENSE'
       - '*.md'
       - '*.yml'
-      
+
 jobs:
   run:
     runs-on: ubuntu-latest
