@@ -11,7 +11,9 @@ RUN apk update && \
 
 RUN mkdir -p ${HTDOCS_DIR} \ 
              /run/nginx && \
-    rm -rf /etc/nginx/conf.d/default.conf
+    rm -rf /etc/nginx/conf.d/default.conf && \
+    mkdir -p /etc/nginx/conf.d/ && \
+    mkdir -p /etc/nginx/ssl/
 
 COPY htdocs ${HTDOCS_DIR}
 COPY etc/nginx ${ETC_DIR}/nginx
