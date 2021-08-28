@@ -4,7 +4,7 @@ services:
   nginx:
     build:
       context: .
-    image: ghcr.io/concepting-com-br/${BUILD_NAME}:${BUILD_VERSION}
+    image: ghcr.io/fvilarinho/${BUILD_NAME}:${BUILD_VERSION}
     container_name: ${BUILD_NAME}
     hostname: ${BUILD_NAME}
     ports: 
@@ -14,13 +14,13 @@ services:
       - etcd
       
   etcd:
-    image: ghcr.io/concepting-com-br/etcd:1.1.0
+    image: ghcr.io/fvilarinho/etcd:1.1.0
     container_name: etcd
     hostname: etcd
     ports: 
       - "2379:2379"
     volumes:
-      - ./etc/settings.json:/home/user/etc/nginx.json
+      - ./etc/settings.json:/home/user/etc/${BUILD_NAME}.json
       - etcd-data:/home/user/data
 
 volumes:
