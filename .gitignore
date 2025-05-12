@@ -2,3 +2,5 @@
 /.gradle/
 /.idea/
 /.secrets
+/etc/nginx/ssl/cert.key
+/etc/nginx/ssl/cert.pem
