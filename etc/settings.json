@@ -1,14 +1,4 @@
 {
-	"build":{
-		"name": {
-			"description": "Name of the build.",
-			"value": "nginx"
-		},
-		"version": {
-			"description": "Version of the build.",
-			"value": "1.1.0"
-		}
-	},
 	"port": {
 		"description": "Network port to listen the requests.",
 		"value": 80

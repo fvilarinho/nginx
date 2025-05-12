@@ -17,7 +17,7 @@ How to use
 
 Just put the line below in your Dockerfile.
 
-`FROM ghcr.io/fvilarinho/nginx:1.1.0` - To use the last stable version.
+`FROM ghcr.io/fvilarinho/nginx:1.2.0` - To use the last stable version.
 
 `FROM ghcr.io/fvilarinho/nginx:latest` - To use the development version.
 
