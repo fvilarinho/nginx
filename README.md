@@ -6,12 +6,6 @@ It uses the `ghcr.io/fvilarinho/base-image` and `nginx` as the main engine.
 The configurations/settings are defined using the JSON format and stored in the `etc` directory.
 
 
-Build status
-============
-
-![CI/CD](https://github.com/fvilarinho/nginx/workflows/CI/CD/badge.svg)
-
-
 How to use
 ==========
 
