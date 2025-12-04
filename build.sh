@@ -13,3 +13,7 @@ if [ -n "$DOCKER_REGISTRY_URL" ]; then
 fi
 
 docker buildx bake
+
+export BUILD_VERSION=latest
+
+docker buildx bake
