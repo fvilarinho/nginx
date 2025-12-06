@@ -14,7 +14,7 @@ Just put the line below in your Dockerfile.
 
 Build status
 ============
-
+[![CI/CD Pipeline](https://github.com/fvilarinho/nginx/actions/workflows/pipeline.yml/badge.svg)](https://github.com/fvilarinho/nginx/actions/workflows/pipeline.yml)
 
 License
 =======
